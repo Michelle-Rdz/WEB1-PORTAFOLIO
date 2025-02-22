@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Práctico</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(13, 67, 75);
+        }
+        h2{
+            text-align: center;
+            color:rgb(18, 104, 119);
+        }
+        h3{
+            text-align: center;
+            color:rgb(15, 124, 143);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        footer {
+            background-color:rgba(28, 85, 95, 0.646);
+            color: white;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        iframe {
+            width: 600px;
+            height: 400px;
+            border: none;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+        }
+        .visit-table {
+            background-color:rgba(19, 129, 148, 0.493);
+            color: white;
+            text-align: center;
+            width: 150px; 
+        }
+    </style>
+    <script>
+        function loadIframe() {
+            document.getElementById('iframe').src = 'https://turismo.monterrey.gob.mx/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Programación Web I PRIM 25</h1>
+    </header>
+    <section>
+        <h2>Evaluación práctica Parcial 1</h2>
+        <h3>Profesora: M.C. Imelda Deyanira Hernández Martínez</h3>
+        <h3>Alumna: García Rodríguez Michelle Guadalupe</h3>
+    
+     <div class="container">
+        <table class="visit-table">
+            <tr>
+                <td>Visita Monterrey</td>
+            </tr>
+        </table>
+
+        <img src="https://media.istockphoto.com/id/660033184/es/vector/mapa-moderno-nuevo-leon-mx.jpg?s=612x612&w=0&k=20&c=Bhpd52Iw_IXTRyFLIj7sac28jIQWIJ-_Bshp0ba1HWo=" alt="Mapa Nuevo León" id="mapaNuevoLeon" style="cursor: pointer;" onclick="loadIframe()">
+
+        <iframe id="iframe" src="" width="600" height="400" style="border:none;"></iframe>
+    </div>
+    <section>
+        <table>
+            <tr>
+                <td><img src="cerro.jpg" alt="Cerro de la Silla"></td>
+                <td><img src="paseo.jpg" alt="Paseo de Santa Lucía"></td>
+                <td><img src="bbva.jpg" alt="Estadio BBVA"></td>
+            </tr>
+        </table>
+    </section>
+    
+    <footer>
+        <p>Universidad Politécnica de San Luis Potosí</p>
+    </footer>
+    <address>San Luis Potosí, México | Universidad Politécnica de San Luis Potosí</address>
+</body>
+</html>
