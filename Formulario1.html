@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERCADO LIBRE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1d310a5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Información general del cliente</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido_paterno">Apellido Paterno:</label>
+            <input type="text" id="apellido_paterno" name="apellido_paterno" >
+
+            <label for="apellido_materno">Apellido Materno:</label>
+            <input type="text" id="apellido_materno" name="apellido_materno" >
+
+            <label for="usuario">Nombre de Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="fecha_registro">Fecha de Registro:</label>
+            <input type="date" id="fecha_registro" name="fecha_registro" >
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de entrega</legend>
+        
+        <label for="pais">País:</label>
+    <select id="pais" name="pais">
+    <option value="AF">Afganistán</option>
+    <option value="AR">Argentina</option>
+    <option value="BO">Bolivia</option>
+    <option value="BR">Brasil</option>
+    <option value="CA">Canadá</option>
+    <option value="CL">Chile</option>
+    <option value="CO">Colombia</option>
+    <option value="CR">Costa Rica</option>
+    <option value="CU">Cuba</option>
+    <option value="DO">República Dominicana</option>
+    <option value="EC">Ecuador</option>
+    <option value="ES">España</option>
+    <option value="FR">Francia</option>
+    <option value="GT">Guatemala</option>
+    <option value="HN">Honduras</option>
+    <option value="IT">Italia</option>
+    <option value="MX">México</option>
+    <option value="NI">Nicaragua</option>
+    <option value="PA">Panamá</option>
+    <option value="PE">Perú</option>
+    <option value="PY">Paraguay</option>
+    <option value="SV">El Salvador</option>
+    <option value="US">Estados Unidos</option>
+    <option value="UY">Uruguay</option>
+    <option value="VE">Venezuela</option>
+</select>
+        
+
+            <label for="rfc">RFC:</label>
+            <input type="text" id="rfc" name="rfc" required>
+
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" >
+
+            <label for="colonia">Colonia:</label>
+            <input type="text" id="colonia" name="colonia" >
+
+            <label for="numero_casa">Número de Casa:</label>
+            <input type="number" id="numero_casa" name="numero_casa" >
+
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="number" id="codigo_postal" name="codigo_postal" >
+
+            <label for="casilla">Acepto términos y condiciones</label>
+            <input name="casilla" type="radio" value="" >
+            </fieldset>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</body>
+</html>
