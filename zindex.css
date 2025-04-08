@@ -1,0 +1,49 @@
+.contenedor{
+    position:relative;
+    top: 10px;
+    background: rgba(9, 135, 167, 0.774);
+    height: 150px;
+ 
+}
+.c1{
+    position: relative;
+    height:50px;
+    background: rgba(165, 118, 153, 0.774);
+    top: 25px;
+    left: 50px;
+    
+}
+.c2{
+    position: absolute;
+    background: rgba(194, 221, 119, 0.863);
+    right: 50px;
+    z-index: 2;
+    height: 100px;
+    width: 150px;
+}
+.c3{
+    position:absolute;
+    background: rgba(187, 51, 51, 0.418);
+    width: 150px;
+    height: 150px;
+    z-index: 5;
+}
+.c4{
+    position: absolute;
+    background-color: rgba(255, 174, 0, 0.712);
+    width: 150px;
+    height: 200px;
+    top:120px;
+    left: 50px;
+    z-index: 3;
+
+}
+.c5{
+    border:2px solid plum;
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 4;
+}
