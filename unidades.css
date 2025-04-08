@@ -5,11 +5,11 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background-color: rgba(36, 86, 160, 0.815);
   }
   
   header {
-    background-color: #4a90e2;
+    background-color:rgba(29, 49, 78, 0.884);
     color: white;
     padding: 2rem;
     text-align: center;
@@ -21,7 +21,7 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(42, 174, 226, 0.884);
   }
   
   .pixeles {
