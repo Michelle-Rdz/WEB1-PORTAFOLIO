@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smar Fit - Feel Good Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #FFD700; 
+            --secondary-color: #000000; 
+            --text-color: #333333;
+            --light-color: #f8f8f8;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .search-box input {
+            padding: 0.8rem;
+            width: 60%;
+            max-width: 500px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-box button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-dark {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .half-width {
+            width: 48%;
+        }
+        
+        .trial-form {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+        }
+        
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group input {
+            margin-right: 0.5rem;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e6c200;
+        }
+        
+        footer {
+         background-color: var(--secondary-color);
+         color: white;
+         padding: 3rem 0 2rem;
+          margin-top: 2rem;
+        }
+
+       .footer-container {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+        }
+
+        .footer-section {
+          width: 30%;
+          margin-bottom: 1.5rem;
+        }
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="logo">SMART FIT </div>
+            <nav>
+                <ul>
+                     <li><a href="ubicaciones.html">Ubicaciones</a></li>
+                    <li><a href="porque-smartfit.html">Porque Smart Fit</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bot.html">Chat Bot</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Feel Good Fitness</h1>
+            
+    </section>
+    
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Siéntete Apoyado Con Smar Fit</h2>
+            <div class="section-content">
+                <div class="half-width">
+                    <p>Con acceso mundial las 24 horas, los 7 días de la semana, contratos mensuales, entrenamiento personal, una variedad de equipos y un entorno agradable, Smar Fit es el gimnasio adecuado para ti. Dime ahora para que compruebes cómo Smar Fit puede ayudarte a lograr tus objetivos.</p>
+                </div>
+                <div class="half-width">
+                    <h3>Ayudamos A Crear Hábitos De Vida Positivos</h3>
+                    <p>Tenemos la misión de ayudar a las personas a crear hábitos de vida positivos que los hagan sentir fantásticos.</p>
+                    <p>¡En Smar Fit, todo se trata de sensaciones!</p>
+                    <button class="submit-btn">Encuentra Un Gimnasio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <iframe
+        src="https://landbot.online/v3/H-2929178-BXG8P1I4RO81B4N9/index.html"
+        title="Chatbot Atlético de San Luis"></iframe>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Pruébanos</h2>
+            <div class="section-content">
+                <div class="half-width">
+                    <p>Sí, estoy interesado en Smar Fit y me gustaría venir a probar el ambiente con un entrenamiento de prueba gratuito.</p>
+                </div>
+                <div class="half-width">
+                    <form class="trial-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido *</label>
+                            <input type="text" id="apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Número de teléfono *</label>
+                            <input type="tel" id="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comentario">Comentario</label>
+                            <textarea id="comentario"></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="email-notifications">
+                            <label for="email-notifications">Email - Notificarme de las últimas ofertas y ofertas especiales de Smar Fit</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="sms-notifications">
+                            <label for="sms-notifications">SMS - Notificarme de las últimas ofertas y ofertas especiales de Smar Fit</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy-policy" required>
+                            <label for="privacy-policy">He leído y acepto la política de cookies de Smar Fit y políticas de privacidad del sitio web (Incluso el procesamiento y la divulgación de mis datos personales).</label>
+                        </div>
+                        
+                        <p>Smar Fit, un miembro del grupo Smar Fit, valora su privacidad y se esfuerza para darle opciones siempre que sea posible. Si está de acuerdo, nos gustaría mantenerlo informado sobre nuestras ofertas, productos, servicios o eventos por correo electrónico o mensaje de texto. Marque a continuación si desea recibir exactamente los siguientes tipos de comunicaciones por correo electrónico de Smar Fit o del Club del que es socio: recuerde que puede darse de baja en cualquier momento haciendo clic en el enlace para darse de baja en la parte inferior de cada correo electrónico.</p>
+                        
+                        <button type="submit" class="submit-btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p>Síguenos en nuestras redes sociales para mantenerte al día con nuestras promociones y consejos de fitness.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Preguntas Frecuentes</h3>
+                <ul>
+                    <li><a href="#">¿Cómo me registro?</a></li>
+                    <li><a href="#">¿Cuáles son los horarios?</a></li>
+                    <li><a href="#">¿Ofrecen entrenamiento personal?</a></li>
+                    <li><a href="#">¿Puedo congelar mi membresía?</a></li>
+                    <li><a href="#">¿Qué equipos tienen?</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +52 123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> info@smarfit.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</li>
+                    <li><a href="ubicaciones.html">Ver todas las ubicaciones</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025Smart Fit. Todos los derechos reservados.</p>
+            <p><a href="#">Términos de Servicio</a> | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
